@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.CadTarefa">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo" />
+
+    <EditText
+        android:id="@+id/titulo"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="6dp"
+        android:layout_width="400dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/descricao" />
+
+    <EditText
+        android:id="@+id/descricao"
+        android:background="@drawable/shape"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="3"
+        android:gravity="top"
+        android:layout_width="400dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/data"
+        android:background="@drawable/shape"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="6dp"
+        android:text="@string/data"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/salvar"
+        android:background="@drawable/shape"
+        android:text="@string/salvar"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="6dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" />
+
+
+
+
+</FrameLayout>
