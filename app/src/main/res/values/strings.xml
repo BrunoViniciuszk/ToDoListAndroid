@@ -5,4 +5,7 @@
     <string name="descricao">Descrição da Tarefa</string>
     <string name="salvar">Salvar</string>
     <string name="data">Data</string>
+    <string name="erroData">Informe uma data</string>
+    <string name="erroTitle">Informe um titulo</string>
+    <string name="erroDesc">Informe uma descrição</string>
 </resources>
