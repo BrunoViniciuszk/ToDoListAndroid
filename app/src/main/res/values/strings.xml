@@ -8,4 +8,7 @@
     <string name="erroData">Informe uma data</string>
     <string name="erroTitle">Informe um titulo</string>
     <string name="erroDesc">Informe uma descrição</string>
+    <string name="aberta">Aberta</string>
+    <string name="concluida">Concluída</string>
+    <string name="atrasada">Atrasada</string>
 </resources>

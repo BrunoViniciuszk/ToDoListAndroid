@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cadTarefa">
+    app:startDestination="@id/principalFragment">
 
     <fragment
         android:id="@+id/principalFragment"
         android:name="br.senai.sp.cotia.todolistapp.activity.fragment.PrincipalFragment"
-        android:label="fragment_principal"
+        android:label="ToDoList App"
         tools:layout="@layout/fragment_principal" >
         <action
             android:id="@+id/action_principalFragment_to_cadTarefa"
@@ -20,12 +20,12 @@
     <fragment
         android:id="@+id/cadTarefa"
         android:name="br.senai.sp.cotia.todolistapp.activity.fragment.CadTarefa"
-        android:label="fragment_cad_tarefa"
+        android:label="Cadastrar Tarefa"
         tools:layout="@layout/fragment_cad_tarefa" />
     <fragment
         android:id="@+id/detalheTarefa"
         android:name="br.senai.sp.cotia.todolistapp.activity.fragment.DetalheTarefa"
-        android:label="fragment_detalhe_tarefa"
+        android:label="Vizualizar Tarefa"
         tools:layout="@layout/fragment_detalhe_tarefa" >
         <action
             android:id="@+id/action_detalheTarefa_to_itemTarefa"
@@ -34,6 +34,6 @@
     <fragment
         android:id="@+id/itemTarefa"
         android:name="br.senai.sp.cotia.todolistapp.activity.fragment.ItemTarefa"
-        android:label="fragment_item_tarefa"
+        android:label="Item da Tarefa"
         tools:layout="@layout/fragment_item_tarefa" />
 </navigation>

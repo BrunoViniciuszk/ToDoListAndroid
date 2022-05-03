@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/ToDoListApp/app/src/main/res/drawable/shape.xml" value="0.39427083333333335" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/activity_main.xml" value="0.1838905775075988" />
+        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/adapter_tarefas.xml" value="0.24230072463768115" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/fragment_cad_tarefa.xml" value="0.33" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/ToDoListApp/app/src/main/res/layout/fragment_principal.xml" value="0.24230072463768115" />
       </map>

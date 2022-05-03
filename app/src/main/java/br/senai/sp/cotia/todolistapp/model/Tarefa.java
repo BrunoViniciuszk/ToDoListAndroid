@@ -61,4 +61,9 @@ public class Tarefa {
     public void setDataFinalizada(long dataFinalizada) {
         this.dataFinalizada = dataFinalizada;
     }
+
+    // informa se a tarefa está concluída
+    public boolean isConcluda() {
+        return dataFinalizada != 0;
+    }
 }
