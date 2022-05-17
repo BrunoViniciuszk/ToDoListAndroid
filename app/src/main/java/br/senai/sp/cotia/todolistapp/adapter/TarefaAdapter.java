@@ -1,6 +1,7 @@
 package br.senai.sp.cotia.todolistapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +23,15 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     private List<Tarefa> tarefas;
     // variavel para o Context
     private Context context;
+    // variavel do tipo OnTarefaClickListener
+    private OnTarefaClickListener listenerClickTarefa;
 
 
     // construtor pra receber os valores
-    public TarefaAdapter(List<Tarefa> lista, Context contexto) {
+    public TarefaAdapter(List<Tarefa> lista, Context contexto,  OnTarefaClickListener listener) {
         this.tarefas = lista;
         this.context = contexto;
+        this.listenerClickTarefa = listener;
     }
 
     @NonNull
@@ -41,6 +45,7 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
 
     @Override
     public void onBindViewHolder(@NonNull TarefaViewHolder holder, int position) {
+        Long dataAtual = Calendar.getInstance().getTimeInMillis();
         // obtem a tarefa pela position
         Tarefa t = tarefas.get(position);
         // exibe o titulo da tarefa no text view
@@ -51,8 +56,9 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         if(t.isConcluda()) {
             holder.tvStatus.setText(R.string.concluida);
             holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.green));
-        }else if() {
-
+        }else if(Calendar.getInstance().getTimeInMillis() > t.getDataPrevista()) {
+            holder.tvStatus.setText(R.string.atrasada);
+            holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.red));
         }else {
             holder.tvStatus.setText(R.string.aberta);
             holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.yellow));
@@ -61,6 +67,12 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         // formata a data de long para String
         SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
         holder.tvData.setText(fmt.format(t.getDataPrevista()));
+
+        holder.itemView.setOnClickListener(v -> {
+            // dispara o listener
+            listenerClickTarefa.onClick(v, t);
+
+        });
 
     }
 
@@ -86,5 +98,11 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
                tvStatus = view.findViewById(R.id.status_taf);
                tvDescricao = view.findViewById(R.id.tv_descricao);
            }
+       }
+
+        // interface para o clique na tarefa
+        public interface  OnTarefaClickListener {
+            void onClick(View view, Tarefa tarefa);
+
        }
 }
